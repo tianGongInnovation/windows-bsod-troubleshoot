@@ -1,8 +1,8 @@
 ---
 name: windows-bsod-troubleshoot
-description: Windows 蓝屏（BSOD, Blue Screen of Death）排查。读取 C:\Windows\Minidump\ 下的 .dmp 文件，用 WinDbg + !analyze -v 定位肇事驱动或模块，并附常见停止代码（IRQL_NOT_LESS_OR_EQUAL / DPC_WATCHDOG_VIOLATION / WHEA_UNCORRECTABLE_ERROR / MEMORY_MANAGEMENT 等）速查表。触发词：蓝屏、蓝屏了、BSOD、蓝屏分析、蓝屏死机、minidump 解析、WinDbg、停止代码、stop code。
+description: 电脑突然蓝屏死机（屏幕变蓝、满是英文、随后自动重启）之后的排查工具。很多人遇到蓝屏只会重启，过不了几天又蓝，因为没找到根子。本技能提供两条排查路线：一是蓝屏当下拍下屏幕上的停止代码（一串类似 IRQL_NOT_LESS_OR_EQUAL 的英文），直接搜索，大多数蓝屏在搜索结果前几条就能锁定原因；二是读取系统留在 C:\Windows\Minidump\ 文件夹里的转储文件（.dmp），用微软官方的蓝屏分析工具 WinDbg 跑一条命令，三行之内指出肇事的驱动或模块——是显卡驱动、内存条，还是某个杀毒软件，一目了然。附常见停止代码速查表：每个代码对应什么部件、先查什么。适合：电脑反复蓝屏找不到原因、新装硬件或软件后开始蓝屏、想弄清蓝屏到底是硬件问题还是软件问题的使用者。触发词：蓝屏、蓝屏了、BSOD、蓝屏分析、蓝屏死机、minidump 解析、WinDbg、停止代码、stop code。
 agent_created: true
-version: 1.0.1
+version: 1.0.2
 author: 天工创新坊
 license: CC BY 4.0
 display_name: "蓝屏排查"
