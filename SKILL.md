@@ -5,12 +5,12 @@ description: >-
 
   电脑突然蓝屏死机（屏幕变蓝、满是英文、随后自动重启）之后，用这个技能让智能体帮您查到根子、修到实处。电脑每次蓝屏时，系统都会自动保存一份内存映象文件（记录崩溃瞬间系统正在运行什么），普通人对这份文件完全读不懂；本技能让智能体借助系统工具直接读懂它，再结合大模型在学习阶段掌握的大量微软底层技术资料和国外 Windows 用户社群积累的排错经验，把以前让人完全蒙圈的蓝屏，变成有希望找到原因、有针对性解决办法的普通故障。完整过程：先做好蓝屏监控，等蓝屏再现后判读系统保存的信息、分析原因、定位到具体出问题的驱动程序或其它部件（比如某个驱动版本不兼容），给出替换或修复方案，指导您重启后继续使用，并跟踪验证到不再蓝屏为止。两条排查路线：蓝屏当下拍下屏幕上的停止代码（一串大写英文）直接搜索，多数情况前几条结果就能锁定原因；或读取系统留存的转储文件，用微软官方的蓝屏分析工具跑一条命令，几行之内指出肇事的是哪个驱动或模块。附常见停止代码速查表。适合：电脑反复蓝屏找不到原因、新装硬件或软件后开始蓝屏、想弄清蓝屏是硬件问题还是软件问题的使用者。触发词：蓝屏、蓝屏了、BSOD、蓝屏分析、蓝屏死机、minidump 解析、WinDbg、停止代码、stop code。
 agent_created: true
-version: 1.0.5
+version: 1.0.6
 author: 天工创新坊
 license: CC BY 4.0
 display_name: "Windows 蓝屏故障排查"
 display_name_en: Windows BSOD Troubleshoot
-trigger: ["蓝屏", "蓝屏了", "BSOD", "蓝屏分析", "蓝屏死机"]
+trigger: ["蓝屏", "蓝屏了", "BSOD", "蓝屏分析", "蓝屏死机", "blue screen", "blue screen of death", "analyze blue screen", "stop code", "minidump"]
 description_zh: "电脑蓝屏后，让智能体读懂系统自动保存的崩溃内存映象，结合大模型掌握的微软底层技术资料，定位肇事的驱动或部件，给出修复方案并跟踪验证到不再蓝屏——把让人完全蒙圈的蓝屏变成能根治的普通故障"
 description_en: "After a blue screen crash, the agent reads the memory dump Windows saves automatically, pinpoints the faulty driver or component using deep knowledge of Windows internals, applies a targeted fix, and follows up until the crash stays gone"
 category: development
